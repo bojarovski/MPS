@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/Findzzer.runtime/Findzzer.runtime.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/Findzzer.sandbox/Findzzer.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/Findzzer/Findzzer.mpl" folder="" />
+    </projectModules>
+  </component>
+</project>
