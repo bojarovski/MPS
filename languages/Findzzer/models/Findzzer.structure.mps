@@ -59,15 +59,18 @@
       <property role="IQ2ns" value="3793857013563077979" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="settings" />
-      <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3iAvdDA3jmI" resolve="Settings" />
     </node>
     <node concept="1TJgyj" id="3iAvdDA3jlt" role="1TKVEi">
       <property role="IQ2ns" value="3793857013563077981" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="api" />
-      <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3iAvdDA3jmL" resolve="Api" />
+    </node>
+    <node concept="1TJgyi" id="5HQ19RQecFF" role="1TKVEl">
+      <property role="IQ2nx" value="6590460181190593259" />
+      <property role="TrG5h" value="dsl_name" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
   <node concept="1TIwiD" id="3iAvdDA3jmC">
@@ -151,6 +154,11 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="Components" />
       <ref role="20lvS9" node="3iAvdDA3jmQ" resolve="Components" />
+    </node>
+    <node concept="1TJgyj" id="5HQ19RQjequ" role="1TKVEi">
+      <property role="IQ2ns" value="6590460181191911070" />
+      <property role="20kJfa" value="cName" />
+      <ref role="20lvS9" node="3iAvdDA3jnv" resolve="DataTable" />
     </node>
   </node>
   <node concept="1TIwiD" id="3iAvdDA3jnf">

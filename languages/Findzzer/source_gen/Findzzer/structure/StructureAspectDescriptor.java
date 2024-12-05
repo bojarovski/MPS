@@ -166,6 +166,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:881a2812-7fae-40ca-93b0-e623549d2ace(Findzzer.structure)/3793857013563078070");
     b.version(3);
+    b.associate("cName", 0x5b76049df64ce69eL).target(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35dfL).optional(true).origin("6590460181191911070").done();
     b.aggregate("Components", 0x504507f2c966603dL).target(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35b6L).optional(true).ordered(true).multiple(false).origin("5784038035769679933").done();
     return b.create();
   }
@@ -211,9 +212,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:881a2812-7fae-40ca-93b0-e623549d2ace(Findzzer.structure)/7872570756217133829");
     b.version(3);
+    b.property("dsl_name", 0x5b76049df638caebL).type(PrimitiveTypeId.STRING).origin("6590460181190593259").done();
     b.aggregate("page", 0x34a67cda660d355aL).target(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35a8L).optional(true).ordered(true).multiple(true).origin("3793857013563077978").done();
-    b.aggregate("settings", 0x34a67cda660d355bL).target(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35aeL).optional(false).ordered(true).multiple(false).origin("3793857013563077979").done();
-    b.aggregate("api", 0x34a67cda660d355dL).target(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35b1L).optional(false).ordered(true).multiple(false).origin("3793857013563077981").done();
+    b.aggregate("settings", 0x34a67cda660d355bL).target(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35aeL).optional(true).ordered(true).multiple(false).origin("3793857013563077979").done();
+    b.aggregate("api", 0x34a67cda660d355dL).target(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35b1L).optional(true).ordered(true).multiple(false).origin("3793857013563077981").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForFooter() {
