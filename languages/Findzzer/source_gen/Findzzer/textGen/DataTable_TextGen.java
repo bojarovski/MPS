@@ -13,31 +13,49 @@ public class DataTable_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
+    tgs.append("=======================DATA TABLE====================================================================================");
+    tgs.newLine();
+
     tgs.append("<template>");
     tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
-    tgs.append("<v-data-table :headers=\"headers\"\n      :items=\"items\"\n      :items-per-page=\"5\"\n      class=\"elevation-1\"\n    >");
+    tgs.append("<h1>");
+    tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.headers$GoE5));
+    tgs.append("</h1>");
+
+    tgs.append("<v-data-table :headers=\"headers\"\n      :items=\"items\"\n      :items-per-page=\"5\"\n      class=\"elevation-1\"\n    >\n");
+
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
     tgs.append("<template v-slot:top>");
+    tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
     tgs.append("<v-toolbar flat>");
+    tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
     tgs.append("<v-toolbar-title>{{ title }}</v-toolbar-title>");
-    tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.headers$GoE5));
-    tgs.append("<v-spacer>\"</v-spacer>");
-    tgs.append("  <v-btn color=\"primary\" dark @click=\"$emit('add-item')\">\n            New Item\n          </v-btn>");
+    tgs.newLine();
+    tgs.append("  <v-btn color=\"primary\" dark @click=\"$emit('add-item')\">\n New Item\n </v-btn>");
+    tgs.newLine();
     ctx.getBuffer().area().decreaseIndent();
     tgs.append("</v-toolbar>");
+    tgs.newLine();
     ctx.getBuffer().area().decreaseIndent();
     tgs.append("</template>");
+    tgs.newLine();
+    tgs.append("<template v-slot:[`item.actions`]=\"{ item }\">\n        <v-icon class=\"me-2\" size=\"small\" @click=\"$emit('edit-item', item)\">\n          mdi-pencil\n        </v-icon>\n        <v-icon size=\"small\" @click=\"$emit('delete-item', item)\">\n          mdi-delete\n        </v-icon>\n      </template>\n    ");
+    tgs.newLine();
     ctx.getBuffer().area().decreaseIndent();
-    tgs.append("</data-table>");
+    tgs.append("</v-data-table>");
+    tgs.newLine();
     ctx.getBuffer().area().decreaseIndent();
     tgs.append("</template>");
+    tgs.newLine();
+    tgs.append("===========================================================================================================");
+
   }
 
   private static final class PROPS {

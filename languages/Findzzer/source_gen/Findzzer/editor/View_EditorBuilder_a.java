@@ -109,7 +109,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_2() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "title");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "version");
     editorCell.setCellId("Constant_3ycbab_b1a");
     editorCell.setDefaultText("");
     return editorCell;
@@ -123,11 +123,11 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createProperty_0() {
     getCellFactory().pushCellContext();
     try {
-      final SProperty property = PROPS.pageTitle$DjQp;
+      final SProperty property = PROPS.version$DjQp;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
-      editorCell.setDefaultText("<no pageTitle>");
-      editorCell.setCellId("property_pageTitle");
+      editorCell.setDefaultText("<no version>");
+      editorCell.setCellId("property_version");
       editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
       setCellContext(editorCell);
       Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.PropertyAttribute$Gb);
@@ -241,7 +241,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty pageTitle$DjQp = MetaAdapterFactory.getProperty(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35a8L, 0x34a67cda660d35acL, "pageTitle");
+    /*package*/ static final SProperty version$DjQp = MetaAdapterFactory.getProperty(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35a8L, 0x34a67cda660d35acL, "version");
   }
 
   private static final class CONCEPTS {

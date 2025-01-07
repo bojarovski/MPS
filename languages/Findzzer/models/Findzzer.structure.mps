@@ -82,8 +82,8 @@
     </node>
     <node concept="1TJgyi" id="3iAvdDA3jmG" role="1TKVEl">
       <property role="IQ2nx" value="3793857013563078060" />
-      <property role="TrG5h" value="pageTitle" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+      <property role="TrG5h" value="version" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="1TJgyj" id="5151Zb9lCjE" role="1TKVEi">
       <property role="IQ2ns" value="5784038035768640746" />
@@ -152,13 +152,16 @@
     <node concept="1TJgyj" id="5151Zb9pA0X" role="1TKVEi">
       <property role="IQ2ns" value="5784038035769679933" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="Components" />
-      <ref role="20lvS9" node="3iAvdDA3jmQ" resolve="Components" />
-    </node>
-    <node concept="1TJgyj" id="5HQ19RQjequ" role="1TKVEi">
-      <property role="IQ2ns" value="6590460181191911070" />
-      <property role="20kJfa" value="cName" />
+      <property role="20kJfa" value="DataTable" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="3iAvdDA3jnv" resolve="DataTable" />
+    </node>
+    <node concept="1TJgyj" id="3NAHaUykuOg" role="1TKVEi">
+      <property role="IQ2ns" value="4388393549059714320" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="Card" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="3iAvdDA3jo3" resolve="Card" />
     </node>
   </node>
   <node concept="1TIwiD" id="3iAvdDA3jnf">
@@ -189,10 +192,7 @@
   <node concept="1TIwiD" id="3iAvdDA3jnv">
     <property role="EcuMT" value="3793857013563078111" />
     <property role="TrG5h" value="DataTable" />
-    <ref role="1TJDcQ" node="3iAvdDA3jmQ" resolve="Components" />
-    <node concept="PrWs8" id="3iAvdDA3jnw" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="3iAvdDA3jn$" role="1TKVEl">
       <property role="IQ2nx" value="3793857013563078116" />
       <property role="TrG5h" value="headers" />
@@ -288,8 +288,8 @@
   </node>
   <node concept="1TIwiD" id="3iAvdDA3jo3">
     <property role="EcuMT" value="3793857013563078147" />
-    <property role="TrG5h" value="Dialog" />
-    <ref role="1TJDcQ" node="3iAvdDA3jmQ" resolve="Components" />
+    <property role="TrG5h" value="Card" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="3iAvdDA3jo5" role="1TKVEl">
       <property role="IQ2nx" value="3793857013563078149" />
       <property role="TrG5h" value="message" />
@@ -298,6 +298,11 @@
     <node concept="1TJgyi" id="3iAvdDA3jo7" role="1TKVEl">
       <property role="IQ2nx" value="3793857013563078151" />
       <property role="TrG5h" value="action" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="3NAHaUykuND" role="1TKVEl">
+      <property role="IQ2nx" value="4388393549059714281" />
+      <property role="TrG5h" value="title" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>

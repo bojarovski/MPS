@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="eqo4x3pgy2brhdurp785x1xhcrt6ble">
-  <files names="Components_TextGen.java:DataTable_TextGen.java:Findzzer_TextGen.java:Settings_TextGen.java:TextGenAspectDescriptor.java:View_TextGen.java" />
+<product version="3" modelHash="897skuji9c8sbp9ak55nnftmmfgltr6">
+  <files names="Card_TextGen.java:Components_TextGen.java:DataTable_TextGen.java:Findzzer_TextGen.java:Footer_TextGen.java:Settings_TextGen.java:TextGenAspectDescriptor.java:View_TextGen.java" />
 </product>
 

@@ -25,12 +25,16 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
   @Override
   public TextGenDescriptor getDescriptor(@NotNull SAbstractConcept concept) {
     switch (myIndex.index(concept)) {
+      case LanguageConceptSwitch.Card:
+        return new Card_TextGen();
       case LanguageConceptSwitch.Components:
         return new Components_TextGen();
       case LanguageConceptSwitch.DataTable:
         return new DataTable_TextGen();
       case LanguageConceptSwitch.Findzzer:
         return new Findzzer_TextGen();
+      case LanguageConceptSwitch.Footer:
+        return new Footer_TextGen();
       case LanguageConceptSwitch.Settings:
         return new Settings_TextGen();
       case LanguageConceptSwitch.View:
@@ -54,7 +58,7 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
     return SPropertyOperations.getString(node, PROPS.dsl_name$d0kX);
   }
   private static String getFileExtension_Findzzer(SNode node) {
-    return "js";
+    return "vue";
   }
   private static String getPath_Findzzer(SNode node) {
     return "myNote/";

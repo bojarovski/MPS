@@ -5,8 +5,8 @@ package Findzzer.textGen;
 import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
@@ -14,12 +14,20 @@ public class Components_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    for (SNode item : SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.Components$ryOc)) {
-      tgs.appendNode(item);
+    if (SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.DataTable$ryOc) != null) {
+      for (SNode item : SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.DataTable$ryOc)) {
+        tgs.appendNode(item);
+      }
+    }
+    if (SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.Card$pXBb) != null) {
+      for (SNode item : SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.Card$pXBb)) {
+        tgs.appendNode(item);
+      }
     }
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink Components$ryOc = MetaAdapterFactory.getContainmentLink(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35b6L, 0x504507f2c966603dL, "Components");
+    /*package*/ static final SContainmentLink DataTable$ryOc = MetaAdapterFactory.getContainmentLink(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35b6L, 0x504507f2c966603dL, "DataTable");
+    /*package*/ static final SContainmentLink Card$pXBb = MetaAdapterFactory.getContainmentLink(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35b6L, 0x3ce6b4aea251ed10L, "Card");
   }
 }

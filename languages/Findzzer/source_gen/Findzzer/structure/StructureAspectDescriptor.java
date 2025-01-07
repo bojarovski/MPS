@@ -16,11 +16,11 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptApi = createDescriptorForApi();
   /*package*/ final ConceptDescriptor myConceptArray = createDescriptorForArray();
   /*package*/ final ConceptDescriptor myConceptButton = createDescriptorForButton();
+  /*package*/ final ConceptDescriptor myConceptCard = createDescriptorForCard();
   /*package*/ final ConceptDescriptor myConceptChart = createDescriptorForChart();
   /*package*/ final ConceptDescriptor myConceptClicakbleText = createDescriptorForClicakbleText();
   /*package*/ final ConceptDescriptor myConceptComponents = createDescriptorForComponents();
   /*package*/ final ConceptDescriptor myConceptDataTable = createDescriptorForDataTable();
-  /*package*/ final ConceptDescriptor myConceptDialog = createDescriptorForDialog();
   /*package*/ final ConceptDescriptor myConceptDropdown = createDescriptorForDropdown();
   /*package*/ final ConceptDescriptor myConceptFindzzer = createDescriptorForFindzzer();
   /*package*/ final ConceptDescriptor myConceptFooter = createDescriptorForFooter();
@@ -48,7 +48,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptApi, myConceptArray, myConceptButton, myConceptChart, myConceptClicakbleText, myConceptComponents, myConceptDataTable, myConceptDialog, myConceptDropdown, myConceptFindzzer, myConceptFooter, myConceptForm, myConceptHeader, myConceptMenu, myConceptSearchBar, myConceptSettings, myConceptSocialMedia, myConceptTheme, myConceptView, myConceptchartObject);
+    return Arrays.asList(myConceptApi, myConceptArray, myConceptButton, myConceptCard, myConceptChart, myConceptClicakbleText, myConceptComponents, myConceptDataTable, myConceptDropdown, myConceptFindzzer, myConceptFooter, myConceptForm, myConceptHeader, myConceptMenu, myConceptSearchBar, myConceptSettings, myConceptSocialMedia, myConceptTheme, myConceptView, myConceptchartObject);
   }
 
   @Override
@@ -61,6 +61,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptArray;
       case LanguageConceptSwitch.Button:
         return myConceptButton;
+      case LanguageConceptSwitch.Card:
+        return myConceptCard;
       case LanguageConceptSwitch.Chart:
         return myConceptChart;
       case LanguageConceptSwitch.ClicakbleText:
@@ -69,8 +71,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptComponents;
       case LanguageConceptSwitch.DataTable:
         return myConceptDataTable;
-      case LanguageConceptSwitch.Dialog:
-        return myConceptDialog;
       case LanguageConceptSwitch.Dropdown:
         return myConceptDropdown;
       case LanguageConceptSwitch.Findzzer:
@@ -134,6 +134,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("action", 0x34a67cda660d3600L).type(PrimitiveTypeId.STRING).origin("3793857013563078144").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForCard() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Findzzer", "Card", 0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d3603L);
+    b.class_(false, false, false);
+    b.origin("r:881a2812-7fae-40ca-93b0-e623549d2ace(Findzzer.structure)/3793857013563078147");
+    b.version(3);
+    b.property("message", 0x34a67cda660d3605L).type(PrimitiveTypeId.STRING).origin("3793857013563078149").done();
+    b.property("action", 0x34a67cda660d3607L).type(PrimitiveTypeId.BOOLEAN).origin("3793857013563078151").done();
+    b.property("title", 0x3ce6b4aea251ece9L).type(PrimitiveTypeId.STRING).origin("4388393549059714281").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForChart() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Findzzer", "Chart", 0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35cfL);
     b.class_(false, false, false);
@@ -166,32 +176,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:881a2812-7fae-40ca-93b0-e623549d2ace(Findzzer.structure)/3793857013563078070");
     b.version(3);
-    b.associate("cName", 0x5b76049df64ce69eL).target(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35dfL).optional(true).origin("6590460181191911070").done();
-    b.aggregate("Components", 0x504507f2c966603dL).target(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35b6L).optional(true).ordered(true).multiple(false).origin("5784038035769679933").done();
+    b.aggregate("DataTable", 0x504507f2c966603dL).target(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35dfL).optional(true).ordered(true).multiple(true).origin("5784038035769679933").done();
+    b.aggregate("Card", 0x3ce6b4aea251ed10L).target(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d3603L).optional(true).ordered(true).multiple(true).origin("4388393549059714320").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDataTable() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Findzzer", "DataTable", 0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35dfL);
     b.class_(false, false, false);
-    // extends: Findzzer.structure.Components
-    b.super_(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35b6L);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:881a2812-7fae-40ca-93b0-e623549d2ace(Findzzer.structure)/3793857013563078111");
     b.version(3);
     b.property("headers", 0x34a67cda660d35e4L).type(PrimitiveTypeId.STRING).origin("3793857013563078116").done();
     b.property("action", 0x34a67cda660d35e5L).type(PrimitiveTypeId.STRING).origin("3793857013563078117").done();
     b.property("data", 0x34a67cda660d35e6L).type(PrimitiveTypeId.STRING).origin("3793857013563078118").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForDialog() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Findzzer", "Dialog", 0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d3603L);
-    b.class_(false, false, false);
-    // extends: Findzzer.structure.Components
-    b.super_(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35b6L);
-    b.origin("r:881a2812-7fae-40ca-93b0-e623549d2ace(Findzzer.structure)/3793857013563078147");
-    b.version(3);
-    b.property("message", 0x34a67cda660d3605L).type(PrimitiveTypeId.STRING).origin("3793857013563078149").done();
-    b.property("action", 0x34a67cda660d3607L).type(PrimitiveTypeId.STRING).origin("3793857013563078151").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDropdown() {
@@ -317,7 +313,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:881a2812-7fae-40ca-93b0-e623549d2ace(Findzzer.structure)/3793857013563078056");
     b.version(3);
-    b.property("pageTitle", 0x34a67cda660d35acL).type(PrimitiveTypeId.STRING).origin("3793857013563078060").done();
+    b.property("version", 0x34a67cda660d35acL).type(PrimitiveTypeId.INTEGER).origin("3793857013563078060").done();
     b.aggregate("Component", 0x504507f2c95684eaL).target(0xf4fcfb4c57c745ceL, 0xa8ab88347bde635aL, 0x34a67cda660d35b6L).optional(true).ordered(true).multiple(true).origin("5784038035768640746").done();
     return b.create();
   }
